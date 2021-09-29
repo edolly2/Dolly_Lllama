@@ -1,0 +1,142 @@
+* {
+  border: 2px solid red;
+}
+/* grid system */
+.hero__grid {
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-columns: 1fr;
+  max-height: 100vh;
+}
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  flex: 0 1 auto;
+}
+[class*="col-"] {
+  flex: 0 0 92%;
+  /* margin: 0 4%; */
+}
+.col-1-2,
+.col-1-4 {
+}
+.col-2,
+.col-2-4 {
+}
+.col-3 {
+}
+.col-4 {
+}
+
+/* global alignment options */
+/* .reverse {
+  flex-direction: row-reverse;
+} */
+
+/* Mobile Landscape Screen Sizes */
+@media only screen and (min-width: 480px) {
+  [class*="col-"] {
+    /* margin-left: 4%; */
+    /* margin-right: 0%; */
+  }
+  .col-1-2,
+  .col-2 {
+    flex: 0 0 44%;
+  }
+  .col-1-4,
+  .col-3,
+  .col-4,
+  .col-2-4 {
+    flex: 0 0 92%;
+  }
+  .reverse [class*="col-"] {
+    margin-left: 0%;
+    margin-right: 4%;
+  }
+}
+/* Desktop screen Sizes */
+@media only screen and (min-width: 768px) {
+  .col-1-2,
+  .col-1-4 {
+    flex: 0 0 20%;
+  }
+  .col-2,
+  .col-2-4 {
+    flex: 0 0 44%;
+  }
+  .col-3 {
+    flex: 0 0 68%;
+  }
+  .col-4 {
+    flex: 0 0 92%;
+  }
+  /* .order-first {
+    order: 1;
+  }
+  .order-second {
+    order: 2;
+  }
+  .order-third {
+    order: 3;
+  }
+  .order-fourth {
+    order: 4;
+  } */
+}
+
+.hero {
+  background-image: url("../_assets/sd-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 100vw;
+  /* width: 100%; */
+  min-height: 100vh;
+  max-height: 100vh;
+  /* height: 100%; */
+  position: relative;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  backdrop-filter: blur(3px);
+}
+
+.hero__content {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+}
+
+.hero__brand {
+  max-width: 5rem;
+  height: auto;
+  margin: 1.6rem 0;
+}
+
+.hero__nav ul {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin: 1.6rem 0;
+}
+
+.hero a,
+.hero {
+  color: #fff;
+}
+
+.hero p {
+  padding: 0 1.6rem;
+}
+
+.hero__see-more {
+}
