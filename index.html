@@ -1,49 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./_assets/lama1.svg" />
-    <title>PORT</title>
-    <link rel="stylesheet" href="_css/MyReset.min.css" />
-    <link rel="stylesheet" href="_css/style.css" />
-    <!-- <script src="_js/jquery-3.6.0.min.js" defer></script> -->
-    <script src="_js/main.js" defer></script>
-  </head>
 
-  <body>
-    <div class="page">
-      <header class="hero">
-        <div class="hero__overlay"></div>
-        <div class="hero__content">
-          <a href=""
-            ><img src="/_assets/lama-outline.svg" alt="#" class="hero__brand"
-          /></a>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Eric Dollinger" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="./_assets/lama-outline.svg" />
+  <meta property="og:description"
+    content="This is a portfolio website of Front-end Developer Eric Dollinger" />
+  <meta name="description"
+    content="This is a portfolio website of Front-end Developer Eric Dollinger" />
+  <meta property="og:site_name" content="" />
+  <meta property="og:determiner" content="" />
+  <link rel="shortcut icon" href="./_assets/lama-outline.svg" />
+  <link rel="apple-touch-icon" href="./_assets/favicon.png" />
+  <title>PORT</title>
+  <link rel="stylesheet" href="_css/MyReset.min.css" />
+  <link rel="stylesheet" href="_css/style.css" />
+  <!-- <script src="_js/jquery-3.6.0.min.js" defer></script> -->
+  <script src="_js/main.js" defer></script>
+</head>
 
-          <h1 class="hero__title">Hi! I am Eric Dollinger</h1>
-          <p class="hero__info">
-            I'm a 30 year old Front-end Developer, working out of Omaha, NE. I
-            appreciate your interest. Have a look around!
-          </p>
-
-          <div class="hero__see-more">
-            <p>SEE MORE</p>
-            <i>ICON</i>
-          </div>
-          <div class="hero__nav">
-            <nav>
-              <ul>
-                <a href="#"><li>Home</li></a>
-                <a href="#"><li>Bio</li></a>
-                <a href="#"><li>Portfolio</li></a>
-                <a href="#"><li>Contact</li></a>
-                <a href="#"><li>Blog</li></a>
-              </ul>
-            </nav>
-          </div>
+<body>
+  <div class="page">
+    <!-- HEADER/HERO -->
+    <header class="hero">
+      <div class="hero__overlay"></div>
+      <div class="hero__content">
+        <a href=""><img src="/_assets/lama-outline.svg" alt=" "
+            class="hero__brand" /></a>
+        <!-- NAVIGATION -->
+        <div class="hero__nav">
+          <nav>
+            <ul class="hero__nav-list">
+              <a href="#">
+                <li>Home</li>
+              </a>
+              <a href="#">
+                <li>Bio</li>
+              </a>
+              <a href="#">
+                <li>Portfolio</li>
+              </a>
+              <a href="#">
+                <li>Contact</li>
+              </a>
+              <a href="#">
+                <li>Blog</li>
+              </a>
+            </ul>
+          </nav>
         </div>
-      </header>
-    </div>
-  </body>
+        <!-- NAVIGATION END -->
+        <h1 class="hero__title">Hi! I am Eric Dollinger</h1>
+        <p class="hero__info">
+          I'm a 30 year old Front-end Developer, working out of Omaha, NE. I
+          appreciate your interest. Have a look around!
+        </p>
+        <div class="hero__see-more">
+          <p>SEE MORE</p>
+          <i>ICON</i>
+        </div>
+      </div>
+    </header>
+    <!-- HEADER/HERO END -->
+
+    <main>
+      <!-- CONTACT FORM -->
+      <div class="contact-form">
+        <div class="contact-form__wrapper">
+
+          <form action="" class="contact-form__form">
+            <h2 class="contact-form__title">I would love to hear from you!
+            </h2>
+
+            <p class="red">ALL FIELDS ARE REQUIRED</p>
+            <div class="name-fields">
+              <label for="first-name" class="first-name-label"
+                title="First Name Required">
+                First Name<br />
+                <input type="text" name="first-name" id="first-name"
+                  placeholder="First Name" spellcheck="false" required />
+              </label>
+              <label for="last-name" class="last-name-label"
+                title="Last Name Required">
+                Last Name<br />
+                <input type="text" name="last-name" id="last-name"
+                  placeholder="Last Name" spellcheck="false" required />
+              </label>
+            </div>
+            <label for="email" title="Email Name Required">
+              Email<br />
+              <input type="email" name="email" id="email" placeholder="Email"
+                spellcheck="false" required />
+            </label>
+            <label for="get-in-touch" title="Your Thoughts Are Required">
+              Comments<br />
+              <textarea name="get-in-touch" id="get-in-touch" cols="30"
+                rows="10" placeholder="Get in touch" spellcheck="true"
+                required></textarea>
+            </label>
+
+            <button type="submit" class="btn">Send</button>
+          </form>
+        </div>
+      </div>
+      <!-- CONTACT FORM END -->
+    </main>
+
+    <footer>
+
+    </footer>
+
+  </div>
+</body>
+
 </html>
