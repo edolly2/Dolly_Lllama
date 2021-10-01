@@ -21,7 +21,6 @@
   <link rel="stylesheet" href="_css/MyReset.min.css" />
   <link rel="stylesheet" href="_css/style.css" />
   <!-- <script src="_js/jquery-3.6.0.min.js" defer></script> -->
-  <script src="_js/main.js" defer></script>
 </head>
 
 <body>
@@ -80,38 +79,57 @@
       <div class="contact-form">
         <div class="contact-form__wrapper">
 
-          <form action="" class="contact-form__form">
+          <form action="#" method="POST" name="contactForm"
+            class="contact-form__form" id="contactForm"
+            onsubmit="return(validateForm());">
             <h2 class="contact-form__title">I would love to hear from you!
             </h2>
 
             <p class="red">ALL FIELDS ARE REQUIRED</p>
             <div class="name-fields">
-              <label for="first-name" class="first-name-label"
+
+              <label for="firstName" class="first-name-label"
                 title="First Name Required">
                 First Name<br />
-                <input type="text" name="first-name" id="first-name"
-                  placeholder="First Name" spellcheck="false" required />
+                <input type="text" name="firstName" id="firstName"
+                  placeholder="First Name" spellcheck="false" />
+                <span role="alert" id="firstNameError" aria-hidden="true">
+                  First name is required
+                </span>
+
               </label>
-              <label for="last-name" class="last-name-label"
+              <label for="lastName" class="last-name-label"
                 title="Last Name Required">
                 Last Name<br />
-                <input type="text" name="last-name" id="last-name"
-                  placeholder="Last Name" spellcheck="false" required />
+                <input type="text" name="lastName" id="lastName"
+                  placeholder="Last Name" spellcheck="false" />
+                <span role="alert" id="lastNameError" aria-hidden="true">
+                  Last name is required
+                </span>
+
               </label>
             </div>
             <label for="email" title="Email Name Required">
               Email<br />
               <input type="email" name="email" id="email" placeholder="Email"
-                spellcheck="false" required />
-            </label>
-            <label for="get-in-touch" title="Your Thoughts Are Required">
-              Comments<br />
-              <textarea name="get-in-touch" id="get-in-touch" cols="30"
-                rows="10" placeholder="Get in touch" spellcheck="true"
-                required></textarea>
+                spellcheck="false" />
+              <span role="alert" id="emailError" aria-hidden="true">
+                Email is required
+              </span>
             </label>
 
-            <button type="submit" class="btn">Send</button>
+            <label for="comments" title="Your Thoughts Are Required">
+              Comments<br />
+              <textarea name="comments" id="comments" cols="30" rows="10"
+                placeholder="Get in touch" spellcheck="true"></textarea>
+              <span role="alert" id="commentsError" aria-hidden="true">
+                Your thoughts are required
+              </span>
+            </label>
+
+            <button type="submit" value="submit" class="btn"
+              id="submit">Send</button>
+
           </form>
         </div>
       </div>
@@ -123,6 +141,7 @@
     </footer>
 
   </div>
+  <script src="_js/main.js"></script>
 </body>
 
 </html>

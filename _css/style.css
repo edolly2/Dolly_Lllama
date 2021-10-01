@@ -1,3 +1,9 @@
+:root {
+  --error-color: #dc3545;
+  --success-color: #28a745;
+  --warning-color: #ffc107;
+}
+
 * {
   /* border: 2px solid red; */
 }
@@ -251,4 +257,25 @@ textarea {
   transform: rotate(-0.15turn);
   display: flex;
   align-items: flex-end;
+}
+
+#firstNameError,
+#lastNameError,
+#commentsError,
+#emailError {
+  display: none;
+  font-size: 0.8em;
+}
+
+#firstNameError.visible,
+#lastNameError.visible,
+#commentsError.visible,
+#emailError.visible {
+  display: block;
+  color: red;
+}
+
+input.invalid,
+textarea.invalid {
+  border-color: red;
 }
